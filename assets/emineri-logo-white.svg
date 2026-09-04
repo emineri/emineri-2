@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 440 120" width="100%" height="100%">
+  <!-- Icon: 3 isometric boxes stacked with gold arrow -->
+  <g id="boxes">
+    <!-- Top Box -->
+    <!-- Top face -->
+    <polygon points="46,14 78,2 108,14 76,26" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="2"/>
+    <polygon points="62,8 72,4 84,9 74,13" fill="#C98A2E"/>
+    <!-- Left face -->
+    <polygon points="46,14 76,26 76,46 46,34" fill="#0B2D4D" stroke="#0B2D4D" stroke-width="1.5"/>
+    <!-- Right face -->
+    <polygon points="76,26 108,14 108,34 76,46" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="1.5"/>
+
+    <!-- Middle Box -->
+    <!-- Top face -->
+    <polygon points="46,40 78,28 108,40 76,52" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="2"/>
+    <polygon points="62,34 72,30 84,35 74,39" fill="#C98A2E"/>
+    <!-- Left face -->
+    <polygon points="46,40 76,52 76,72 46,60" fill="#0B2D4D" stroke="#0B2D4D" stroke-width="1.5"/>
+    <!-- Right face -->
+    <polygon points="76,52 108,40 108,60 76,72" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="1.5"/>
+
+    <!-- Bottom Box -->
+    <!-- Top face -->
+    <polygon points="46,66 78,54 108,66 76,78" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="2"/>
+    <polygon points="62,60 72,56 84,61 74,65" fill="#C98A2E"/>
+    <!-- Left face -->
+    <polygon points="46,66 76,78 76,98 46,86" fill="#0B2D4D" stroke="#0B2D4D" stroke-width="1.5"/>
+    <!-- Right face -->
+    <polygon points="76,78 108,66 108,86 76,98" fill="#FFFFFF" stroke="#0B2D4D" stroke-width="1.5"/>
+
+    <!-- Golden Arrow swoosh -->
+    <path d="M 40,78 C 36,88 56,86 74,74 C 92,62 112,42 124,24 L 114,24 L 138,10 L 140,36 L 130,34 C 118,52 96,72 74,84 C 54,94 34,94 40,78 Z" fill="#C98A2E"/>
+  </g>
+
+  <!-- Wordmark: EMINERI -->
+  <text x="148" y="78" fill="#FFFFFF" font-family="'Inter', 'Montserrat', system-ui, sans-serif" font-weight="900" font-size="68" letter-spacing="2">EMINERI</text>
+
+  <!-- Golden Underline and Tagline -->
+  <line x1="148" y1="94" x2="182" y2="94" stroke="#C98A2E" stroke-width="3" stroke-linecap="round"/>
+  <text x="188" y="97" fill="#FFFFFF" font-family="'Inter', system-ui, sans-serif" font-weight="800" font-size="11.5" letter-spacing="2.8">DISTRIBUTION &amp; SUPPLY COMPANY</text>
+  <line x1="416" y1="94" x2="436" y2="94" stroke="#C98A2E" stroke-width="3" stroke-linecap="round"/>
+</svg>
