@@ -1,241 +1,642 @@
 <!doctype html>
-<html lang="es">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>EMINERI | Distribución y Abastecimiento Comercial</title>
+    <title>EMINERI | Distribution &amp; Supply Company</title>
     <meta
       name="description"
-      content="Soluciones de abastecimiento, distribución y soporte logístico para comercios independientes y negocios minoristas."
+      content="EMINERI Distribution &amp; Supply Company LLC purchases consumer products from established brands, manufacturers, and distributors for resale through its sales channels in the U.S. market."
     />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="topbar">
-      <p data-i18n="topbar">Soluciones de Distribución y Suministro para Comercios en EE.UU.</p>
-      <div class="language-switch" aria-label="Selector de idioma">
-        <button class="active" type="button" data-lang="es">🇪🇸 ES</button>
-        <span>|</span>
-        <button type="button" data-lang="en">🇺🇸 EN</button>
+    <!-- ═══ HEADER / NAVIGATION ═══ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="logo-link">
+          <img
+            class="site-logo"
+            src="assets/emineri-logo-new.jpg"
+            alt="EMINERI Distribution &amp; Supply Company"
+          />
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="#" data-i18n="navHome">Home</a>
+          <a href="#about" data-i18n="navAbout">About Us</a>
+          <a href="#what-we-do" data-i18n="navServices">What We Do</a>
+          <a href="#categories" data-i18n="navCategories">Categories</a>
+          <a href="#suppliers" data-i18n="navSuppliers">Suppliers</a>
+          <a href="#contact" data-i18n="navContact">Contact</a>
+        </nav>
+
+        <div class="header-actions">
+          <a class="nav-cta" href="#contact" data-i18n="navCta">Let's Connect</a>
+
+          <div class="language-switch" aria-label="Language selector">
+            <button class="lang-btn active" type="button" data-lang="en">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" type="button" data-lang="es">ES</button>
+          </div>
+
+          <button class="nav-toggle" id="menuOpenBtn" aria-label="Open menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
       </div>
     </header>
 
-    <main>
-      <section class="brand-strip" aria-label="Marca">
+    <!-- ═══ MOBILE MENU OVERLAY (SLIDE 9) ═══ -->
+    <div class="mobile-menu-modal" id="mobileMenuModal" aria-hidden="true">
+      <div class="menu-modal-top">
         <img
-          class="site-logo"
-          src="assets/emineri-logo.png"
-          alt="EMINERI Distribution & Supply Co."
+          class="menu-logo"
+          src="assets/emineri-logo-new.jpg"
+          alt="EMINERI Distribution &amp; Supply Company"
         />
-      </section>
-
-      <section class="hero">
-        <div class="hero-content">
-          <h1 data-i18n="heroTitle">Soluciones de Distribución y Abastecimiento Comercial</h1>
-          <p data-i18n="heroText">
-            Apoyamos a comercios independientes y minoristas con suministro confiable,
-            inventarios de alta rotación y procesos de distribución eficientes.
-          </p>
-          <a class="primary-button" href="#about-us" data-i18n="heroButton">Conocer más</a>
+        <div class="menu-top-right">
+          <div class="language-switch" aria-label="Language selector">
+            <button class="lang-btn active" type="button" data-lang="en">EN</button>
+            <span class="lang-divider">|</span>
+            <button class="lang-btn" type="button" data-lang="es">ES</button>
+          </div>
+          <button class="menu-close-btn" id="menuCloseBtn" aria-label="Close menu">&times;</button>
         </div>
-      </section>
+      </div>
 
-      <section class="trust-row" aria-label="Beneficios principales">
-        <article>
-          <span class="line-icon">✓</span>
-          <p data-i18n="trustOne">Productos verificados</p>
-        </article>
-        <article>
-          <span class="line-icon">↗</span>
-          <p data-i18n="trustTwo">Envíos rápidos</p>
-        </article>
-        <article>
-          <span class="line-icon">▣</span>
-          <p data-i18n="trustThree">Pagos seguros</p>
-        </article>
-      </section>
+      <nav class="menu-modal-links" aria-label="Mobile navigation">
+        <a href="#" class="menu-link" data-i18n="navHome">Home</a>
+        <div class="menu-divider"></div>
+        <a href="#about" class="menu-link" data-i18n="navAbout">About Us</a>
+        <div class="menu-divider"></div>
+        <a href="#what-we-do" class="menu-link" data-i18n="navServices">What We Do</a>
+        <div class="menu-divider"></div>
+        <a href="#categories" class="menu-link" data-i18n="navCategories">Categories</a>
+        <div class="menu-divider"></div>
+        <a href="#suppliers" class="menu-link" data-i18n="navSuppliers">Suppliers</a>
+        <div class="menu-divider"></div>
+        <a href="#contact" class="menu-link" data-i18n="navContact">Contact</a>
+      </nav>
 
-      <section id="about-us" class="section">
-        <h2 data-i18n="aboutTitle">Quiénes Somos</h2>
-        <div class="text-stack">
-          <p data-i18n="aboutOne">
-            EMINERI Distribution & Supply Company LLC brinda soluciones de abastecimiento
-            y distribución para negocios minoristas independientes.
-          </p>
-          <p data-i18n="aboutTwo">
-            Trabajamos con procesos de reaprovisionamiento, soporte logístico y control
-            de inventarios para mantener continuidad operativa.
-          </p>
-          <p data-i18n="aboutThree">
-            Nuestro modelo se apoya en proveedores confiables, comunicación clara y una
-            atención profesional orientada al suministro mayorista.
-          </p>
-        </div>
-      </section>
+      <div class="menu-modal-bottom">
+        <a class="menu-cta-btn" href="#contact" data-i18n="navCta">Let's Connect</a>
+      </div>
+    </div>
 
-      <section class="section soft">
-        <h2 data-i18n="processTitle">Operación y Procesos Comerciales</h2>
-        <div class="text-stack">
-          <p data-i18n="processOne">
-            Operamos con métodos diseñados para sostener abastecimiento constante,
-            rotación eficiente de inventarios y distribución puntual.
-          </p>
-          <p data-i18n="processTwo">
-            Combinamos evaluación de productos, gestión de proveedores y planificación
-            logística para acompañar el crecimiento de cada comercio.
-          </p>
-        </div>
-      </section>
-
-      <section class="mission-grid section">
-        <div>
-          <h2 data-i18n="missionVisionTitle">Misión y Visión Corporativa</h2>
-        </div>
-        <article class="info-card">
-          <h3 data-i18n="missionTitle">Misión</h3>
-          <p data-i18n="missionText">
-            Proveer soluciones confiables de distribución, compra mayorista, inventario
-            y logística para negocios que necesitan suministro oportuno.
-          </p>
-        </article>
-        <article class="info-card">
-          <h3 data-i18n="visionTitle">Visión</h3>
-          <p data-i18n="visionText">
-            Ser un aliado estratégico reconocido por procesos sólidos, relaciones
-            comerciales responsables y capacidad de fortalecer cadenas de suministro.
-          </p>
-        </article>
-      </section>
-
-      <section class="section values-section">
-        <div class="section-heading">
-          <h2 data-i18n="valuesTitle">Valores Corporativos</h2>
-          <p data-i18n="valuesLead">Principios que guían cada paso de nuestro trabajo.</p>
-        </div>
-        <ul class="values-list">
-          <li data-i18n="valueOne">Integridad y transparencia en cada proceso.</li>
-          <li data-i18n="valueTwo">Compromiso con productos útiles y confiables.</li>
-          <li data-i18n="valueThree">Responsabilidad comercial ante clientes y proveedores.</li>
-          <li data-i18n="valueFour">Relaciones de largo plazo basadas en confianza.</li>
-          <li data-i18n="valueFive">Eficiencia operativa y respuesta oportuna.</li>
-          <li data-i18n="valueSix">Servicio con enfoque humano y cercano.</li>
-        </ul>
-      </section>
-
-      <section class="section">
-        <div class="section-heading centered">
-          <h2 data-i18n="servicesTitle">Servicios</h2>
-        </div>
-        <div class="services-grid">
-          <article class="service-card">
-            <h3 data-i18n="serviceOneTitle">Sourcing y Compra Mayorista</h3>
-            <p data-i18n="serviceOneText">
-              Identificación y adquisición de productos mediante proveedores evaluados.
+    <main>
+      <!-- ═══ 1. HOME / PORTADA (SLIDE 1) ═══ -->
+      <section id="hero" class="hero-section">
+        <div class="hero-overlay"></div>
+        <div class="hero-container">
+          <div class="hero-content">
+            <span class="accent-bar" aria-hidden="true"></span>
+            <h1 class="hero-title" data-i18n="heroTitle">
+              Reliable Products.<br />
+              Long-Term Business<br />
+              Relationships.
+            </h1>
+            <p class="hero-text" data-i18n="heroText">
+              EMINERI purchases consumer products from established brands, manufacturers, and
+              distributors for resale through its sales channels in the U.S. market.
             </p>
-          </article>
-          <article class="service-card">
-            <h3 data-i18n="serviceTwoTitle">Distribución Comercial</h3>
-            <p data-i18n="serviceTwoText">
-              Redistribución de mercancía para negocios que requieren inventarios constantes.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3 data-i18n="serviceThreeTitle">Reaprovisionamiento</h3>
-            <p data-i18n="serviceThreeText">
-              Soluciones de reposición ajustadas al ritmo operativo de cada cliente.
-            </p>
-          </article>
-          <article class="service-card">
-            <h3 data-i18n="serviceFourTitle">Gestión Logística</h3>
-            <p data-i18n="serviceFourText">
-              Apoyo en compras, planificación y continuidad operacional.
-            </p>
-          </article>
+            <a class="hero-btn" href="#suppliers" data-i18n="heroBtn">Become a Supplier</a>
+          </div>
         </div>
       </section>
 
-      <section class="section operations">
-        <div class="section-heading centered">
-          <h2 data-i18n="areasTitle">Áreas Operativas</h2>
-          <p data-i18n="areasLead">
-            Infraestructura y procesos diseñados para garantizar continuidad comercial.
-          </p>
-        </div>
-        <div class="operations-grid">
-          <article class="operation-card warehouse">
-            <img
-              class="card-image"
-              src="assets/warehouse-distribution.jpg"
-              alt="Centro de distribución y almacenamiento"
-            />
-            <h3 data-i18n="areaOneTitle">Centros de Distribución</h3>
-            <p data-i18n="areaOneText">Almacenamiento organizado y eficiente.</p>
-          </article>
-          <article class="operation-card inventory">
-            <img
-              class="card-image"
-              src="assets/logistics-inventory.jpg"
-              alt="Gestión de inventario y logística"
-            />
-            <h3 data-i18n="areaTwoTitle">Gestión de Inventarios</h3>
-            <p data-i18n="areaTwoText">Control preciso y rotación eficiente.</p>
-          </article>
-          <article class="operation-card shipping">
-            <img
-              class="card-image"
-              src="assets/shipping-operations.jpg"
-              alt="Operaciones de envío y distribución"
-            />
-            <h3 data-i18n="areaThreeTitle">Operaciones Logísticas</h3>
-            <p data-i18n="areaThreeText">Movimiento continuo de mercancía.</p>
-          </article>
-          <article class="operation-card planning">
-            <img
-              class="card-image"
-              src="assets/supply-chain-planning.jpg"
-              alt="Planificación de cadena de suministro"
-            />
-            <h3 data-i18n="areaFourTitle">Planificación Estratégica</h3>
-            <p data-i18n="areaFourText">Coordinación y optimización de compras.</p>
-          </article>
+      <!-- ═══ 2. ABOUT US / QUIÉNES SOMOS (SLIDE 2) ═══ -->
+      <section id="about" class="section about-section">
+        <div class="container">
+          <div class="about-composite-card">
+            <div class="about-image-wrap">
+              <img
+                src="assets/about-meeting.jpg"
+                alt="Profesionales evaluando productos durante una conversación comercial."
+                data-i18n-alt="aboutImgAlt"
+                loading="lazy"
+              />
+            </div>
+            <div class="about-content-wrap">
+              <span class="accent-bar" aria-hidden="true"></span>
+              <p class="section-kicker" data-i18n="aboutKicker">ABOUT US</p>
+              <h2 class="section-title" data-i18n="aboutTitle">
+                A U.S. Company Focused on Long-Term Business Relationships
+              </h2>
+              <p class="paragraph" data-i18n="aboutOne">
+                EMINERI Distribution &amp; Supply Company LLC is a Texas-based company engaged in the
+                purchasing and resale of consumer products. We build commercial relationships with
+                established brands, manufacturers, and distributors to offer authentic and reliable
+                products through our sales channels in the U.S. market.
+              </p>
+              <div class="about-divider" aria-hidden="true"></div>
+              <p class="paragraph" data-i18n="aboutTwo">
+                We evaluate each opportunity based on product authenticity, commercial documentation,
+                availability, purchasing terms, and the potential to maintain a recurring supply
+                relationship.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
-      <section class="cta">
-        <h2 data-i18n="ctaTitle">¿Listo para Optimizar tu Cadena de Suministro?</h2>
-        <p data-i18n="ctaText">
-          Contáctanos para conocer cómo podemos fortalecer el abastecimiento de tu negocio.
-        </p>
-        <a class="primary-button" href="mailto:emineritradeusa@gmail.com" data-i18n="ctaButton">
-          Contáctanos
-        </a>
+      <!-- ═══ 3. WHAT WE DO / QUÉ HACEMOS (SLIDE 3) ═══ -->
+      <section id="what-we-do" class="section wwd-section">
+        <div class="container">
+          <div class="section-header-left">
+            <span class="accent-bar" aria-hidden="true"></span>
+            <h2 class="section-title" data-i18n="wwdTitle">What We Do</h2>
+            <p class="section-lead" data-i18n="wwdLead">
+              We evaluate products, purchasing opportunities, and supply relationships for the U.S.
+              market.
+            </p>
+          </div>
+
+          <div class="horizontal-cards-grid wwd-grid">
+            <!-- Card 1: Product Identification -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Document with checkmark -->
+                  <rect x="7" y="6" width="22" height="28" rx="3" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <line x1="12" y1="13" x2="24" y2="13" stroke="#0B2D4D" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="12" y1="18" x2="24" y2="18" stroke="#0B2D4D" stroke-width="1.8" stroke-linecap="round"/>
+                  <line x1="12" y1="23" x2="19" y2="23" stroke="#0B2D4D" stroke-width="1.8" stroke-linecap="round"/>
+                  <path d="M22 28L26 32L34 22" stroke="#C98A2E" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="wwdOneTitle">Product Identification</h3>
+                <p class="compact-card-desc" data-i18n="wwdOneText">
+                  We evaluate products and categories with the potential to be incorporated into our
+                  sales channels.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2: Commercial Purchasing -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Shopping cart with checkmark -->
+                  <path d="M6 9H10L13.5 24H28L31.5 13H12" stroke="#0B2D4D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
+                  <circle cx="16" cy="30" r="2.5" fill="#0B2D4D"/>
+                  <circle cx="26" cy="30" r="2.5" fill="#0B2D4D"/>
+                  <path d="M18 17.5L21 20.5L26 15" stroke="#C98A2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="wwdTwoTitle">Commercial Purchasing</h3>
+                <p class="compact-card-desc" data-i18n="wwdTwoText">
+                  We purchase consumer products for resale in the U.S. market based on availability
+                  and agreed commercial terms.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3: Supplier Management -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Trend graph with dots and checkmark -->
+                  <path d="M6 28L14 20L21 25L32 12" stroke="#0B2D4D" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <circle cx="6" cy="28" r="2" fill="#0B2D4D"/>
+                  <circle cx="14" cy="20" r="2" fill="#0B2D4D"/>
+                  <circle cx="21" cy="25" r="2" fill="#0B2D4D"/>
+                  <circle cx="32" cy="12" r="2" fill="#0B2D4D"/>
+                  <path d="M26 29L30 33L36 25" stroke="#C98A2E" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="wwdThreeTitle">Supplier Management</h3>
+                <p class="compact-card-desc" data-i18n="wwdThreeText">
+                  We evaluate authenticity, documentation, availability, pricing, and supply
+                  continuity before establishing a commercial relationship.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 4: Recurring Purchases -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Rotating circular arrows around box -->
+                  <rect x="14" y="14" width="12" height="12" rx="2" stroke="#0B2D4D" stroke-width="2" fill="none"/>
+                  <path d="M9 16A13 13 0 0 1 29 9" stroke="#0B2D4D" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M29 6L30 11L25 10" stroke="#C98A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M31 24A13 13 0 0 1 11 31" stroke="#0B2D4D" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M11 34L10 29L15 30" stroke="#C98A2E" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="wwdFourTitle">Recurring Purchases</h3>
+                <p class="compact-card-desc" data-i18n="wwdFourText">
+                  We seek to develop relationships that support additional orders when demand exists
+                  and favorable commercial terms remain available.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 4. PRODUCT CATEGORIES (SLIDE 4) ═══ -->
+      <section id="categories" class="section categories-section">
+        <div class="container">
+          <div class="section-header-left">
+            <span class="accent-bar" aria-hidden="true"></span>
+            <h2 class="section-title" data-i18n="catTitle">Product Categories of Interest</h2>
+            <p class="section-lead" data-i18n="catLead">
+              We evaluate purchasing opportunities across different consumer product categories,
+              with particular interest in the following areas:
+            </p>
+          </div>
+
+          <!-- 6 Categories Grid in 2 columns (mobile) / 3 columns (desktop) -->
+          <div class="categories-grid-2col">
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-beauty.jpg"
+                  alt="Beauty &amp; Personal Care"
+                  data-i18n-alt="catBeautyAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catBeauty">Beauty &amp; Personal Care</h3>
+            </article>
+
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-home.jpg"
+                  alt="Home &amp; Household"
+                  data-i18n-alt="catHomeAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catHome">Home &amp; Household</h3>
+            </article>
+
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-automotive.jpg"
+                  alt="Automotive Accessories"
+                  data-i18n-alt="catAutoAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catAuto">Automotive Accessories</h3>
+            </article>
+
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-garden.jpg"
+                  alt="Lawn &amp; Garden"
+                  data-i18n-alt="catGardenAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catGarden">Lawn &amp; Garden</h3>
+            </article>
+
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-tools.jpg"
+                  alt="Tools &amp; Hardware"
+                  data-i18n-alt="catToolsAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catTools">Tools &amp; Hardware</h3>
+            </article>
+
+            <article class="cat-card">
+              <div class="cat-img-box">
+                <img
+                  src="assets/category-general.jpg"
+                  alt="General Consumer Products"
+                  data-i18n-alt="catGeneralAlt"
+                  loading="lazy"
+                />
+              </div>
+              <h3 class="cat-name" data-i18n="catGeneral">General Consumer Products</h3>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 5. WHY WORK WITH EMINERI (SLIDE 5) ═══ -->
+      <section id="why-emineri" class="section why-section">
+        <div class="container">
+          <div class="section-header-left">
+            <span class="accent-bar" aria-hidden="true"></span>
+            <h2 class="section-title" data-i18n="whyTitle">Why Work With EMINERI</h2>
+            <p class="section-lead" data-i18n="whyLead">
+              Our goal is to develop organized, transparent, and mutually beneficial business
+              relationships.
+            </p>
+          </div>
+
+          <div class="horizontal-cards-grid why-grid">
+            <!-- Card 1: Professional Communication -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Chat bubble with horizontal lines -->
+                  <rect x="7" y="9" width="26" height="18" rx="4" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <path d="M12 27L9 32V27H12Z" fill="#0B2D4D"/>
+                  <line x1="12" y1="15" x2="23" y2="15" stroke="#C98A2E" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="12" y1="20" x2="19" y2="20" stroke="#C98A2E" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="whyOneTitle">Professional Communication</h3>
+                <p class="compact-card-desc" data-i18n="whyOneText">
+                  We maintain clear business communication and provide responsible follow-up on every
+                  opportunity.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 2: Authentic Products -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Box / Tag with checkmark inside -->
+                  <rect x="8" y="12" width="24" height="20" rx="3" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <path d="M20 7V12" stroke="#0B2D4D" stroke-width="2" stroke-linecap="round"/>
+                  <path d="M14 22L18 26L26 17" stroke="#C98A2E" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="whyTwoTitle">Authentic Products</h3>
+                <p class="compact-card-desc" data-i18n="whyTwoText">
+                  We prioritize authentic products from brands, manufacturers, and verifiable supply
+                  channels.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 3: Long-Term Relationships -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Two connected circles / link -->
+                  <circle cx="13" cy="20" r="6" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <circle cx="27" cy="20" r="6" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <line x1="19" y1="20" x2="21" y2="20" stroke="#0B2D4D" stroke-width="2.2"/>
+                  <circle cx="13" cy="20" r="2" fill="#C98A2E"/>
+                  <circle cx="27" cy="20" r="2" fill="#C98A2E"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="whyThreeTitle">Long-Term Relationships</h3>
+                <p class="compact-card-desc" data-i18n="whyThreeText">
+                  We seek to develop recurring purchasing opportunities rather than limiting
+                  relationships to isolated transactions.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 4: U.S.-Based Company -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Map pin with US inside -->
+                  <path d="M20 34S10 24.5 10 16A10 10 0 1 1 30 16C30 24.5 20 34 20 34Z" stroke="#0B2D4D" stroke-width="2.2" fill="none"/>
+                  <circle cx="20" cy="16" r="5" fill="#C98A2E"/>
+                  <text x="20" y="18.5" text-anchor="middle" font-size="6" font-weight="900" fill="#FFFFFF" font-family="'Inter', sans-serif">US</text>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="whyFourTitle">U.S.-Based Company</h3>
+                <p class="compact-card-desc" data-i18n="whyFourText">
+                  EMINERI Distribution &amp; Supply Company LLC is a Texas-based company serving the
+                  U.S. market.
+                </p>
+              </div>
+            </article>
+
+            <!-- Card 5: Organized Documentation -->
+            <article class="compact-card">
+              <div class="compact-card-icon" aria-hidden="true">
+                <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Folder with lines -->
+                  <path d="M6 13H15L18 16H34V31H6V13Z" stroke="#0B2D4D" stroke-width="2.2" stroke-linejoin="round" fill="none"/>
+                  <line x1="12" y1="22" x2="24" y2="22" stroke="#C98A2E" stroke-width="2" stroke-linecap="round"/>
+                  <line x1="12" y1="26" x2="19" y2="26" stroke="#C98A2E" stroke-width="2" stroke-linecap="round"/>
+                </svg>
+              </div>
+              <div class="compact-card-body">
+                <h3 class="compact-card-title" data-i18n="whyFiveTitle">Organized Documentation</h3>
+                <p class="compact-card-desc" data-i18n="whyFiveText">
+                  We value commercial invoices, clear business information, and traceability
+                  throughout the supply chain.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 6. SUPPLIERS / PROVEEDORES (SLIDE 6) ═══ -->
+      <section id="suppliers" class="section suppliers-section">
+        <div class="container">
+          <div class="suppliers-composite-card">
+            <div class="suppliers-image-wrap">
+              <img
+                src="assets/suppliers-conversation.jpg"
+                alt="Proveedor y comprador conversando sobre una oportunidad comercial."
+                data-i18n-alt="supImgAlt"
+                loading="lazy"
+              />
+            </div>
+            <div class="suppliers-content-wrap">
+              <span class="accent-bar" aria-hidden="true"></span>
+              <p class="section-kicker" data-i18n="supKicker">SUPPLIERS</p>
+              <h2 class="section-title" data-i18n="supTitle">
+                Are You a Brand, Manufacturer or Distributor?
+              </h2>
+              <p class="paragraph" data-i18n="supOne">
+                We are interested in establishing commercial relationships with manufacturers,
+                brands, and distributors in the United States seeking to develop new sales
+                opportunities with a responsible buyer.
+              </p>
+              <p class="paragraph" data-i18n="supTwo">
+                We value authentic products, clear commercial documentation, competitive purchasing
+                terms, and recurring supply opportunities.
+              </p>
+              <a class="full-width-btn" href="#contact" data-i18n="supButton">
+                Start a Business Conversation
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ═══ 7. CONTACT / CONTACTO (SLIDES 7 & 8) ═══ -->
+      <section id="contact" class="section contact-section">
+        <div class="container">
+          <div class="section-header-left">
+            <span class="accent-bar" aria-hidden="true"></span>
+            <h2 class="section-title" data-i18n="contactTitle">
+              Let's Discuss Business Opportunities
+            </h2>
+            <p class="section-lead" data-i18n="contactLead">
+              If you represent a brand, manufacturer, or distributor and would like to explore a supply
+              relationship with EMINERI, we would be pleased to learn more about your company and
+              products.
+            </p>
+          </div>
+
+          <div class="contact-card-wrap">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-grid-desktop">
+                <div class="form-group">
+                  <label for="contactName" data-i18n="formName">Name</label>
+                  <input
+                    type="text"
+                    id="contactName"
+                    name="name"
+                    data-i18n-placeholder="formNamePh"
+                    placeholder="Your name"
+                    required
+                  />
+                  <span class="form-error-msg" id="nameError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactCompany" data-i18n="formCompany">Company</label>
+                  <input
+                    type="text"
+                    id="contactCompany"
+                    name="company"
+                    data-i18n-placeholder="formCompanyPh"
+                    placeholder="Company name"
+                    required
+                  />
+                  <span class="form-error-msg" id="companyError"></span>
+                </div>
+              </div>
+
+              <div class="form-grid-desktop">
+                <div class="form-group">
+                  <label for="contactEmail" data-i18n="formEmail">Email</label>
+                  <input
+                    type="email"
+                    id="contactEmail"
+                    name="email"
+                    data-i18n-placeholder="formEmailPh"
+                    placeholder="Business email"
+                    required
+                  />
+                  <span class="form-error-msg" id="emailError"></span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contactPhone" data-i18n="formPhone">Phone — Optional</label>
+                  <input
+                    type="tel"
+                    id="contactPhone"
+                    name="phone"
+                    data-i18n-placeholder="formPhonePh"
+                    placeholder="Phone number"
+                  />
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contactProductType" data-i18n="formProductType">Product Type</label>
+                <input
+                  type="text"
+                  id="contactProductType"
+                  name="productType"
+                  data-i18n-placeholder="formProductTypePh"
+                  placeholder="Type of product"
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="contactMessage" data-i18n="formMessage">Message</label>
+                <textarea
+                  id="contactMessage"
+                  name="message"
+                  rows="4"
+                  data-i18n-placeholder="formMessagePh"
+                  placeholder="Tell us about your company and products"
+                  required
+                ></textarea>
+                <span class="form-error-msg" id="messageError"></span>
+              </div>
+
+              <button type="submit" class="full-width-btn" data-i18n="formSubmit">
+                Submit Information
+              </button>
+
+              <div class="form-status" id="formStatus" role="status" aria-live="polite"></div>
+            </form>
+          </div>
+        </div>
       </section>
     </main>
 
+    <!-- ═══ 8. FOOTER (SLIDE 8) ═══ -->
     <footer class="footer">
-      <div class="footer-brand">
-        <img class="footer-logo" src="assets/emineri-logo.png" alt="EMINERI Logo" />
-        <div>
-          <h3>EMINERI Distribution & Supply Company LLC</h3>
-          <p>Email: <a href="mailto:emineritradeusa@gmail.com">emineritradeusa@gmail.com</a></p>
-          <a
-            class="address"
-            href="https://www.google.com/maps?q=701+Commerce+St,+Ste+500,+3010,+Dallas,+TX+75202"
-            target="_blank"
-            rel="noreferrer"
-          >
-            701 Commerce St, Ste 500 #3010<br />
-            Dallas, TX 75202
-          </a>
+      <div class="footer-inner">
+        <!-- Logo without white box, direct on navy -->
+        <a href="#" class="footer-logo-link" aria-label="EMINERI">
+          <img
+            class="footer-logo"
+            src="assets/emineri-logo-white-generated.png"
+            alt="EMINERI Distribution &amp; Supply Company LLC"
+          />
+        </a>
+
+        <div class="footer-info">
+          <h3 class="footer-company-name">EMINERI Distribution &amp; Supply Company LLC</h3>
+          <a href="https://www.google.com/maps/place/701+Commerce+St+Ste+500,+Dallas,+TX+75202" target="_blank" rel="noopener noreferrer" class="footer-location" data-i18n="footerLocation">701 Commerce St Ste 500 #3010 Dallas, TX 75202, United States</a>
+          <p class="footer-email">
+            <a href="mailto:info@emineri.com">info@emineri.com</a>
+          </p>
         </div>
+
+        <div class="footer-gold-divider" aria-hidden="true"></div>
+
+        <nav class="footer-nav" aria-label="Footer navigation">
+          <div class="footer-nav-row">
+            <a href="#" data-i18n="navHome">Home</a>
+            <span class="footer-nav-sep">|</span>
+            <a href="#about" data-i18n="navAbout">About Us</a>
+            <span class="footer-nav-sep">|</span>
+            <a href="#what-we-do" data-i18n="navServices">What We Do</a>
+            <span class="footer-nav-sep">|</span>
+            <a href="#categories" data-i18n="navCategories">Categories</a>
+          </div>
+          <div class="footer-nav-row">
+            <a href="#suppliers" data-i18n="navSuppliers">Suppliers</a>
+            <span class="footer-nav-sep">|</span>
+            <a href="#contact" data-i18n="navContact">Contact</a>
+          </div>
+        </nav>
+
+        <p class="footer-copyright">
+          &copy; <span id="copyrightYear">2026</span> EMINERI Distribution &amp; Supply Company LLC.
+          <span data-i18n="copyrightRights">All rights reserved.</span>
+        </p>
       </div>
-      <p class="copyright">© 2025 — Soluciones de Abastecimiento y Distribución Comercial</p>
     </footer>
 
     <script src="script.js"></script>
