@@ -3,6 +3,11 @@
    Definitive Script — Bilingual System & Interactivity
    ═══════════════════════════════════════════════════════════════ */
 
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+window.scrollTo(0, 0);
+
 const translations = {
   en: {
     /* Page Metadata */
@@ -456,23 +461,16 @@ if (contactForm) {
     const mailBody = encodeURIComponent(bodyLines);
     const mailtoUrl = `mailto:info@emineri.com?subject=${subject}&body=${mailBody}`;
 
-    // Simulate reliable send and trigger mail client
-    setTimeout(() => {
-      try {
-        const mailLink = document.createElement("a");
-        mailLink.href = mailtoUrl;
-        mailLink.style.display = "none";
-        document.body.appendChild(mailLink);
-        mailLink.click();
-        document.body.removeChild(mailLink);
-      } catch (err) {
-        console.warn("Mail client launch:", err);
-      }
+    // Trigger mail client IMMEDIATELY (synchronously) to avoid mobile popup blockers
+    try {
+      window.location.href = mailtoUrl;
+    } catch (err) {
+      console.warn("Mail client launch:", err);
+    }
 
-      formStatus.className = "form-status success";
-      formStatus.textContent = translations[currentLang].msgSuccess;
-      contactForm.reset();
-    }, 450);
+    formStatus.className = "form-status success";
+    formStatus.textContent = translations[currentLang].msgSuccess;
+    contactForm.reset();
   });
 }
 
