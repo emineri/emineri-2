@@ -132,7 +132,7 @@ const translations = {
     invalidEmail: "Please enter a valid email address.",
 
     /* 8. Footer */
-    footerLocation: "T701 Commerce St Ste 500 #3010 Dallas, TX 75202, United States",
+    footerLocation: "701 Commerce St Ste 500 #3010 Dallas, TX 75202, United States",
     copyrightRights: "All rights reserved.",
   },
 
